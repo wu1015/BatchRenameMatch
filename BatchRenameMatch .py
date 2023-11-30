@@ -2,7 +2,7 @@ import os
 from fnmatch import fnmatch
 
 # 文件夹路径
-folderpath=r"路径"
+folderpath=input(r"请输入路径:"+"\n")
 # 需要匹配的字符key
 matchDict={"key":"value"}
 #更改当前路径
@@ -10,7 +10,7 @@ os.chdir(folderpath)
 # 该文件夹下所有的文件（包括文件夹）
 filelist = os.listdir(folderpath)  
 # flag为操作数，0为替换目标字符串，1为使用字符串进行覆盖
-flag=input("0为替换目标字符串，1为使用字符串进行覆盖\n")
+flag=input("0为替换目标字符串，1为使用字符串进行覆盖:\n")
 print("该文件夹总共"+str(len(filelist))+"个文件或文件夹")
 print("重命名结果为:")
 for i in matchDict.keys():
