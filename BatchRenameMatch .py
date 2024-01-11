@@ -18,7 +18,7 @@ for i in matchDict.keys():
         # 需要文件有扩展名，否则会报错
         stxt=str(j).split(".")
         # 使用通配符匹配字符串（如“啊123不”，“123”，匹配“123”）
-        if(fnmatch(stxt[0],"*"+i+"*")):
+        if(fnmatch(stxt[0],"*"+i+"*") or fnmatch(stxt[0],"*"+matchDict.get(i)+"*")):
             if(flag=="0"):
                 lsTmp=str(stxt[0]).split(i,1)
                 # 加上原文件名和扩展名
